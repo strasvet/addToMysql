@@ -13,6 +13,7 @@ import java.util.List;
 
 @Component
 public class ApplicationRunner {
+/*
 
     @Autowired
     private UserService userService;
@@ -25,6 +26,7 @@ public class ApplicationRunner {
 
     @Autowired
     private UserDetailsService userDetailsService;
+*/
 
     @Autowired
     AllMenu allMenu;
