@@ -1,13 +1,12 @@
-package com.company.viewMenu.my.items;
+package com.company.view.my.items;
 
 
 import com.company.model.User;
+import com.company.model.UserDetails;
 import com.company.service.UserDetailsService;
 import com.company.service.UserService;
-import com.company.viewMenu.MenuEntry;
-import com.company.viewMenu.my.Keyin;
-
-import java.util.List;
+import com.company.view.MenuEntry;
+import com.company.view.my.Keyin;
 
 /**
  * Created by dsrpc on 24.02.2018.
@@ -33,8 +32,13 @@ public class PrintUserDetails extends MenuEntry {
         if(useru==null) {
             System.err.println("User by ID not found!");
             return;
+        }
+        UserDetails ud = userDetailsService.getByUserId(useru.getId());
+        if(ud==null){
+            System.err.println("User not have user details");
+            return;
         }else{
-            System.out.println(userDetailsService.getByUserId(useru.getId()));
+            System.out.println(ud);
         }
         return;
     }

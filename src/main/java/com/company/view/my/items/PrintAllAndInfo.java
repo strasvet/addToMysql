@@ -1,9 +1,8 @@
-package com.company.viewMenu.my.items;
+package com.company.view.my.items;
 
 
-import com.company.model.User;
 import com.company.service.UserService;
-import com.company.viewMenu.MenuEntry;
+import com.company.view.MenuEntry;
 
 import java.util.List;
 

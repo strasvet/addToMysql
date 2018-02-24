@@ -1,13 +1,10 @@
-package com.company.viewMenu.my.items;
+package com.company.view.my.items;
 
 
 import com.company.model.User;
 import com.company.service.UserService;
-import com.company.viewMenu.MenuEntry;
-import com.company.viewMenu.my.Keyin;
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import com.company.view.MenuEntry;
+import com.company.view.my.Keyin;
 
 /**
  * Created by dsrpc on 24.02.2018.

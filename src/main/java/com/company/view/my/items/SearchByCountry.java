@@ -1,11 +1,11 @@
-package com.company.viewMenu.my.items;
+package com.company.view.my.items;
 
 
 import com.company.model.UserDetails;
 import com.company.service.UserDetailsService;
 import com.company.service.UserService;
-import com.company.viewMenu.MenuEntry;
-import com.company.viewMenu.my.Keyin;
+import com.company.view.MenuEntry;
+import com.company.view.my.Keyin;
 
 /**
  * Created by dsrpc on 24.02.2018.

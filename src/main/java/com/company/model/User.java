@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
-@ToString
+//@ToString
 public class User {
 
     @Id
@@ -28,4 +28,13 @@ public class User {
 
     @Column(name = "LAST_NAME", length = 50)
     private String lastName;
+
+    @Override
+    public String toString() {
+        return "User: " +
+                "id=" + id +
+                ", username= '" + username + '\'' +
+                ", firstName= '" + firstName + '\'' +
+                ", lastName= '" + lastName + '\'' + ' ';
+    }
 }

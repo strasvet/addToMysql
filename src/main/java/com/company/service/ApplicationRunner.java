@@ -4,9 +4,7 @@ import com.company.model.User;
 import com.company.model.UserDetails;
 import com.company.repository.UserDetailsRepository;
 import com.company.repository.UserRepository;
-import com.company.view.main.DemoMenu;
-import com.company.viewMenu.my.AllMenu;
-import lombok.SneakyThrows;
+import com.company.view.my.AllMenu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,9 +27,6 @@ public class ApplicationRunner {
     private UserDetailsService userDetailsService;
 
     @Autowired
-    DemoMenu demoMenu;
-
-    @Autowired
     AllMenu allMenu;
 
 
@@ -43,6 +38,7 @@ public class ApplicationRunner {
         menu.run();*/
         allMenu.getMenu();
     }
+/*
 
     @Transactional
     public void save() {
@@ -113,6 +109,7 @@ public class ApplicationRunner {
         List<User> users = userService.findAll();
         System.out.println(users);
     }
+*/
 
 
 }

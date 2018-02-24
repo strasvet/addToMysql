@@ -1,6 +1,4 @@
-package com.company.viewMenu.my;
-
-import org.springframework.stereotype.Component;
+package com.company.view.my;
 
 /**
  * Created by dsrpc on 24.02.2018.
@@ -72,7 +70,7 @@ public class Keyin {
             }
 
             catch (NumberFormatException e) {
-                System.out.println("Invalid input. Not an integer");
+                System.err.println("Invalid input. Not an integer");
             }
         }
     }

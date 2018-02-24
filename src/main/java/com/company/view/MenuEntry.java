@@ -1,7 +1,4 @@
-package com.company.viewMenu;
-
-import org.springframework.stereotype.Component;
-
+package com.company.view;
 
 
 public abstract class MenuEntry {
@@ -20,4 +17,8 @@ public abstract class MenuEntry {
     }
 
     public abstract void run();
+
+    public boolean isExit(){
+        return false;
+    }
 }

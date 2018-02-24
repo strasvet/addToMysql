@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
-@ToString
+//@ToString
 public class UserDetails {
 
     @Id
@@ -28,4 +28,13 @@ public class UserDetails {
     @Column(unique = true)
     private String address;
 
+    @Override
+    public String toString() {
+        return "UserDetails: " +
+                "id=" + id +
+                ", user= " + user +
+                ", city= '" + city + '\'' +
+                ", country= '" + country + '\'' +
+                ", address= '" + address + '\'' + ' ';
+    }
 }
