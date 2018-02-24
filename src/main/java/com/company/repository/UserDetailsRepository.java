@@ -33,4 +33,15 @@ public class UserDetailsRepository {
         return (UserDetails) resultList.get(0);
     }
 
+    public UserDetails searchByCity(String city){
+        Query query = entityManager.createQuery("select ud From UserDetails ud.city Like :custCity");
+        query.setParameter("custCity", city);
+        List resultList = query.getResultList();
+        if (resultList.isEmpty()) {
+            return null;
+        }
+        return (UserDetails) resultList.get(0);
+        //createQuery("SELECT c FROM Customer c WHERE c.name LIKE :custName").setParameter("custName", name).setMaxResults(10).getResultList();
+    }
+
 }

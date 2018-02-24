@@ -5,9 +5,7 @@ import com.company.model.UserDetails;
 import com.company.repository.UserDetailsRepository;
 import com.company.repository.UserRepository;
 import com.company.view.main.DemoMenu;
-import com.company.viewMenu.Menu;
-import com.company.viewMenu.my.MMM;
-import com.company.viewMenu.my.Prints;
+import com.company.viewMenu.my.AllMenu;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -34,17 +32,16 @@ public class ApplicationRunner {
     DemoMenu demoMenu;
 
     @Autowired
-    MMM mmm;
+    AllMenu allMenu;
 
 
     @Transactional
-    @SneakyThrows
   public void Menu()  {
     //    demoMenu.main();
  /*       Menu menu = new Menu();
         menu.addEntry(new Prints("MYMENUS"));
         menu.run();*/
-        mmm.getMenu();
+        allMenu.getMenu();
     }
 
     @Transactional

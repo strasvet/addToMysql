@@ -1,9 +1,10 @@
-package com.company.viewMenu.my;
+package com.company.viewMenu.my.items;
 
 
 import com.company.model.User;
 import com.company.service.UserService;
 import com.company.viewMenu.MenuEntry;
+import com.company.viewMenu.my.Keyin;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,19 +13,18 @@ import org.springframework.stereotype.Component;
  * Created by dsrpc on 24.02.2018.
  */
 
-public class Prints extends MenuEntry {
-    @Autowired
-    private UserService userService;
-    private String title;
+public class Add extends MenuEntry {
 
-    public Prints(String title) {
+    private UserService userService;
+
+    public Add(String title, UserService userService) {
         super(title);
-       this.title = title;
+        this.userService=userService;
     }
 
     @Override
     public void run() {
-        System.out.println("MY MENUS DEISTVIE!");
+        System.out.println("Add new user");
 
         User user = new User();
         user.setFirstName(Keyin.inString("Please, enter first name: "));

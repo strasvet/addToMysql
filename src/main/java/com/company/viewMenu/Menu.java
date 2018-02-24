@@ -21,6 +21,7 @@ public class Menu {
             @Override
             public void run() {
                 isExit = true;
+                System.out.println("Bye! Bye!");
             }
         });
     }
@@ -34,8 +35,8 @@ public class Menu {
                 //String line = Keyin.inInt("");
                 //int choice = Integer.parseInt(line);
                 int choice = Keyin.inInt("Please, enter number menu: ");
-            if(choice>entries.size()-1){
-                System.out.println("Out of bound! ReEnter number of menu");
+            if(choice>entries.size()){
+                System.err.println("Out of bound! ReEnter number of menu");
                 continue;
             }
                 MenuEntry entry = entries.get(choice - 1);
