@@ -1,0 +1,27 @@
+JPA/Hibernate homework
+
+
+Structure:
+ApplicationRunner - class containing console operations logic
+UserService - receives "ConsoleRequest" objects and manages entity classes
+*Repository - contains JPA logic itself. Saves, updates and gets entity objects
+User and UserDetails - JPA entities. These objects will be converted to SQL queries. EntityManager (primary JPA class) works with those objects ONLY
+
+
+Task
+1. Understand how does the application work!
+2. Move user creation logic from ApplicationRunner to UserService
+3. ApplicationRunner reads console input and calls the methods of UserService
+4. Implement UserDetails functionality:
+- add fields: address (should be unique)
+- implement missing repository methods
+- implement UserDetails service
+
+5. Implement console functionality (minimal viable ̶p̶r̶o̶d̶u̶c̶t̶ task)
+- Should have User CRUD from console to database (including get all and get one)
+
+6. Implement console functionality (high complexity)
+- Implement CRUD for user details by user id.
+- Implement "search by city" and "search by country" (See UserDetail JPQL example for details)
+- User list should contain all user fields and if to get user by id - it is necessary to show all the information
+
