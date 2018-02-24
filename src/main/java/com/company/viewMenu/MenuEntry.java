@@ -3,6 +3,7 @@ package com.company.viewMenu;
 import org.springframework.stereotype.Component;
 
 
+
 public abstract class MenuEntry {
     private String title;
 
