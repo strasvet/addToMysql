@@ -57,13 +57,15 @@ public class Feedback {
 
     @Override
     public String toString() {
-        return "Feedback: " +
+        return "\n" +
+                "Feedback: " +
                 "id=" + id +
                 ", user=" + user +
-                ",\n title: '" + title + '\'' +
-                ",\n content: '" + content + '\'' +
-                ",\n createdOn: " + createdOn +
-                ",\n rate: " + rate +
+                "\n title: '" + title + '\'' +
+                "\n content: '" + content + '\'' +
+                "\n createdOn: " + createdOn +
+                ",\n rate: " +
+                " " + rate +
                 ' ';
     }
 }
