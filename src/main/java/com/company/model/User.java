@@ -16,11 +16,13 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "ID")
+    //@Column
     private Integer id;
 
 
-    @Column(name = "USER_NAME", unique = true, nullable = false)
+    @Column(name = "USER_NAME", unique = true, nullable = false, length = 50)
+    //@Column(name = "USER_NAME", unique = true, nullable = false)
     private String username;
 
     @Column(name = "FIRST_NAME", columnDefinition = "VARCHAR(50) default 'NONE'")

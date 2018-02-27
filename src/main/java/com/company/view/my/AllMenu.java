@@ -1,5 +1,6 @@
 package com.company.view.my;
 
+import com.company.repository.FeedbackRepository;
 import com.company.service.UserDetailsService;
 import com.company.service.UserService;
 import com.company.view.Menu;
@@ -16,6 +17,11 @@ public class AllMenu {
     UserService userService;
     @Autowired
     UserDetailsService userDetailsService;
+
+    @Autowired
+    FeedbackRepository feedbackRepository;
+
+
     @Autowired
     Menu menu;
 
@@ -32,6 +38,7 @@ public class AllMenu {
         menu.addEntry(new PrintUserDetails("Print user details", userService, userDetailsService));*/
         menu.addEntry(new UserMenu("User Menu", userService, userDetailsService));
         menu.addEntry(new PrintMenu("Print & Search Menu", userService, userDetailsService));
+        menu.addEntry(new FeedbackMenu("Feedback menu", userService, userDetailsService, feedbackRepository));
         menu.addEntry(new Exit("Exit"));
         menu.run();
     }
